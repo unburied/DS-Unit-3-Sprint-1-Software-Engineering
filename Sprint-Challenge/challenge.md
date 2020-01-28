@@ -262,11 +262,30 @@ career here, you'll have to answer the following:
 - What, in your opinion, is an important part of code reviews? That is, what is
   something you pay attention to when you review code, and that you appreciate
   when others do the same for your code?
+
+An important aspect of code review is consistency. Understanding that having a 
+flow and maintaining that same a style and structure to your code enhances its 
+legibility. This form in the use of variable names that make sense, neccessary 
+comments, and an appropriate use of whitespace. Block structure and alignment 
+are also an important aspect of code stlye; make sure you function definitions
+and arguments are alinged(when dealing with a larger amount of arguments) and/or
+ensure the suite is correctly spaced. Faltering in one of these areas 
+can degrade the code, no matter how useful it is. 
+ 
 - We have an awful lot of computers here, and it gets pretty confusing with
   slightly different things running on all of them. How could containers help us
   improve this situation?
+  
+Containers are a useful tool when dealing with several applications across systems. 
+For one, they offer speed and flexibility. You can scale up or down according to 
+company needs. They also provide security and isolation which allows you to maintain
+data integrity. One last thing they offer is portability, so applications can run on
+virtually any system. This situation can certainly benefit from the use of containers.
+
 
 Answer both of these questions (baseline ~5 sentences) here in text.
+
+
 
 ### Part 8 - Turn it in!
 
