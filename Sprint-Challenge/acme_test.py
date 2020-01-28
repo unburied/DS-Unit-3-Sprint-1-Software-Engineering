@@ -31,8 +31,8 @@ class AcmeReportTests(unittest.TestCase):
         """Test names to ensure they are generated properly"""
         for product in generate_products():
             phrase = product.name.split()
-            adj = str(phrase[0])
-            noun = str(phrase[1])
+            adj = phrase[0]
+            noun = phrase[1]
 
             self.assertIn(adj, ADJECTIVES)
             self.assertIn(noun, NOUNS)

@@ -14,7 +14,7 @@ def generate_products(num_products=30):
     products = []
 
     for _ in range(num_products):
-        name = str(sample(ADJECTIVES, 1)) + " " + str(sample(NOUNS,1))
+        name = " ".join(sample(ADJECTIVES, 1) + sample(NOUNS,1))
         price = randint(5,100)
         weight = randint(5,100)
         flammability = uniform(0, 2.5)
