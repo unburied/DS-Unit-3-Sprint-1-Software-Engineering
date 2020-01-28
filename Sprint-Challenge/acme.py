@@ -1,14 +1,14 @@
 import random
 
+
 class Product():
     """
     Class used to  organize the vast quantities
     and variety of goods the acme company manages
     and sells.
     """
-    def __init__(self, name, price = 10, weight = 20,
-                 flammability = 0.5, 
-                 identifier = random.randint(1000000, 9999999)):
+    def __init__(self, name, price=10, weight=20, flammability=0.5,
+                 identifier=random.randint(1000000, 9999999)):
         self.name = name
         self.price = price
         self.weight = weight
@@ -17,7 +17,7 @@ class Product():
 
     def stealability(self):
         """
-         calculates the price divided by the weight, 
+         calculates the price divided by the weight,
          returns a message based on calculated ratio
         """
         stealable = self.price / self.weight
@@ -28,7 +28,7 @@ class Product():
             return "Kinda stealable..."
         else:
             return "Very Stealable!"
-        
+
     def explode(self):
         """
         calculates the flammability times the weight,
@@ -38,24 +38,23 @@ class Product():
 
         if explosive < 10:
             return "...fizzle"
-        elif explosive >=10 and explosive < 50:
-            return "...boom!"   
+        elif explosive >= 10 and explosive < 50:
+            return "...boom!"
         else:
             return "...BABOOM!!"
 
 
 class BoxingGlove(Product):
-    def __init__(self, name, price = 10, weight = 10,
-                 flammability = 0.5, 
-                 identifier = random.randint(1000000, 9999999)):
-        
+    def __init__(self, name, price=10, weight=10, flammability=0.5,
+                 identifier=random.randint(1000000, 9999999)):
+
         super().__init__(name, price, weight,
                          flammability, identifier)
 
     def explode(self):
-        #overide explode because..
+        # overide explode because..
         return "...it's a glove"
-        #and gloves don't explode
+        # and gloves don't explode
 
     def punch(self):
         """
@@ -68,5 +67,5 @@ class BoxingGlove(Product):
             return "That tickles."
         elif pain >= 5 and pain < 15:
             return "Hey that hurt!"
-        else: 
+        else:
             return "OUCH!"

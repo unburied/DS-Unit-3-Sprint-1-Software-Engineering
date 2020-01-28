@@ -14,9 +14,9 @@ def generate_products(num_products=30):
     products = []
 
     for _ in range(num_products):
-        name = " ".join(sample(ADJECTIVES, 1) + sample(NOUNS,1))
-        price = randint(5,100)
-        weight = randint(5,100)
+        name = " ".join(sample(ADJECTIVES, 1) + sample(NOUNS, 1))
+        price = randint(5, 100)
+        weight = randint(5, 100)
         flammability = uniform(0, 2.5)
         
         products.append(Product(name, price, weight, flammability))
@@ -25,24 +25,23 @@ def generate_products(num_products=30):
 
 
 def inventory_report(products):
-    #Loop over the products to calculate the report.
+    # Loop over the products to calculate the report.
     names = set()
     prices = []
     weights = []
-    flammabilities = []
+    flamma = []
 
     for product in products:
         names.add(product.name)
         prices.append(product.price)
         weights.append(product.weight)
-        flammabilities.append(product.flammability)
+        flamma.append(product.flammability)
 
     print("ACME CORPORATION OFFICIAL INVENTORY REPORT")
     print(f"Unique product names: {len(names)} ")
     print(f"Average price: {sum(prices) / len(prices):.2f}")
     print(f"Average weight: {sum(weights) / len(weights):.2f}")
-    print(f"Average flammability: {sum(flammabilities) / len(flammabilities):.3f}") 
-
+    print(f"Average flammability: {sum(flamma) / len(flamma):.3f}")
 
 
 if __name__ == '__main__':

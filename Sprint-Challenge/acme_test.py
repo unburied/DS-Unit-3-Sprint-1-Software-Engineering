@@ -17,9 +17,10 @@ class AcmeProductTests(unittest.TestCase):
 
     def test_product_statements(self):
         """Test product methods using different values"""
-        prod = Product(name = 'Test Product' , weight = 100)
+        prod = Product(name='Test Product', weight=100)
         self.assertEqual(prod.stealability(), "Not so stealable...")
         self.assertEqual(prod.explode(), "...BABOOM!!")
+
 
 class AcmeReportTests(unittest.TestCase):
     """Making sure reports are accurate"""
@@ -38,6 +39,5 @@ class AcmeReportTests(unittest.TestCase):
             self.assertIn(noun, NOUNS)
 
 
-
 if __name__ == '__main__':
-    unittest.main()
+    unittest.main()    
